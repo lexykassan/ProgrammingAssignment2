@@ -1,5 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This function calculates the inverse of a square matrix
+## It will cache this inverse to avoid recalculation efforts
 
 ## This function generates the inverse of a matrix called as an argument
 
@@ -12,13 +12,14 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function() x
   setmatrix <- function(solve) m <<- solve
   getmatrix <- function() m
-  list(set = set, get = get,
-       setmatrix = setmatrix,
-       getmatrix = getmatrix)
+  list(set = set, get = get, setmatrix = setmatrix, getmatrix = getmatrix)
 }
 
-## This function looks for a previously cached matrix inverse that was calculated and returns that if available
-## If not found, it calculates and returns the inverse of the matrix specified as an argument
+## This function looks for a previously cached matrix inverse 
+## that was calculated and returns that if available
+
+## If not found, it calculates and returns the inverse of the matrix 
+## specified as an argument
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
